@@ -38,12 +38,24 @@ nav .circle {
     box-shadow: 0 5px 10px rgba(26, 255, 205, 0.22);
 }
 
+nav .circle:hover {
+    background: #E4F1FF;
+    color: #9400FF;
+    transition: all 0.3s ease;
+}   
+
 .song-img {
     width: 220px;
     height: 220px;
     border-radius: 50%;
     border: 8px solid #9400FF;
     box-shadow: 0 10px 60px rgba(26, 255, 205, 0.22);
+}
+
+.song-img:hover {
+    box-shadow: 0 10px 60px rgba(26, 255, 205, 0.42);
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
 }
 
 .music-player h1 {
