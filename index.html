@@ -70,21 +70,29 @@
         }
       }
 
+
+      // Update the progress bar as the song plays
       song.addEventListener("timeupdate", function () {
         progress.value = song.currentTime;
         updateProgressBarColor();
       });
 
+
+      // Update the progress bar as the song plays
       progress.addEventListener("input", function () {
         song.currentTime = progress.value;
         updateProgressBarColor();
       });
+
+      // Update the progress bar as the song plays
       progress.onchange = function () {
         song.currentTime = progress.value;
         song.play();
         ctrlIcon.classList.add("fa-pause");
         ctrlIcon.classList.remove("fa-play");
       };
+
+      // Update the progress bar color
       function updateProgressBarColor() {
         let playedValue = (song.currentTime / song.duration) * 100;
         let playedColor =
